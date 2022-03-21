@@ -1,0 +1,26 @@
+try:
+    input_case = input("Выберите тип операции:\n1 +\n2 -\n3 *\n4 /\n5 **\n")
+    input_case = int(input_case)
+
+    if 0 < input_case < 6:
+        value_1 = input("Введите первое число:")
+        value_1 = float(value_1)
+        value_2 = input("Введиnt второе число:")
+        value_2 = float(value_2)
+
+        if input_case == 1:
+            print(value_1 + value_2)
+        elif input_case == 2:
+            print(value_1 - value_2)
+        elif input_case == 3:
+            print(value_1 * value_2)
+        elif input_case == 4:
+            print(value_1 / value_2)
+        elif input_case == 5:
+            print(value_1 ** value_2)
+    else:
+        print("Вы ввели некоректное значение")
+
+except ValueError:
+    print("Это не  число!")
+
