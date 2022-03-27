@@ -1,27 +1,33 @@
-try:
-    input_case = input("Выберите тип операции:\n1 +\n2 -\n3 *\n4 /\n5 **\n")
-    input_case = int(input_case)
+program_status = 0
 
-    if 0 < input_case < 6:
-        value_1 = input("Введите первое число:")
-        value_1 = float(value_1)
-        value_2 = input("Введиnt второе число:")
-        value_2 = float(value_2)
+while program_status == 0:
+    try:
+        input_case = input("Выберите тип операции:\n1 +\n2 -\n3 *\n4 /\n5 **\n")
+        input_case = int(input_case)
 
-        if input_case == 1:
-            print(value_1 + value_2)
-        elif input_case == 2:
-            print(value_1 - value_2)
-        elif input_case == 3:
-            print(value_1 * value_2)
-        elif input_case == 4:
-            print(value_1 / value_2)
-        elif input_case == 5:
-            print(value_1 ** value_2)
-    else:
-        print("Вы ввели некоректное значение")
+        if 0 < input_case < 6:
+            value_1 = input("Введите первое число:")
+            value_1 = float(value_1)
+            value_2 = input("Введиnt второе число:")
+            value_2 = float(value_2)
 
-except ValueError:
-    print("Это не  число!")
-except ZeroDivisionError:
-    print("На 0 делить нельзя!!!!")
+            if input_case == 1:
+                print(value_1 + value_2)
+            elif input_case == 2:
+                print(value_1 - value_2)
+            elif input_case == 3:
+                print(value_1 * value_2)
+            elif input_case == 4:
+                print(value_1 / value_2)
+            elif input_case == 5:
+                print(value_1 ** value_2)
+        else:
+            print("Вы ввели некоректное значение")
+
+        program_status = input("Вам еще нужен калькулятор? \n0 - да \nЛюбое число - нет ")
+        program_status = int(program_status)
+    except ValueError:
+        print("Это не  число!")
+    except ZeroDivisionError:
+        print("На 0 делить нельзя!!!!")
+
