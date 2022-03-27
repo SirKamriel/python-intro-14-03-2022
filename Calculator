@@ -1,6 +1,6 @@
-program_status = 0
+program_status = '0'
 
-while program_status == 0:
+while program_status == '0':
     try:
         input_case = input("Выберите тип операции:\n1 +\n2 -\n3 *\n4 /\n5 **\n")
         input_case = int(input_case)
@@ -24,8 +24,7 @@ while program_status == 0:
         else:
             print("Вы ввели некоректное значение")
 
-        program_status = input("Вам еще нужен калькулятор? \n0 - да \nЛюбое число - нет ")
-        program_status = int(program_status)
+        program_status = input("Вам еще нужен калькулятор? \n0 - да \nВсе кроме нуля - нет ")
     except ValueError:
         print("Это не  число!")
     except ZeroDivisionError:
